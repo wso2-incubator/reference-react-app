@@ -24,7 +24,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         query: {
-                            presets: ['es2015', 'react'],
+                            presets: ['es2015', 'react']
                         },
                     },
                 ],
@@ -37,11 +37,8 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
-
                 query: {
-                    presets: ['es2015', 'react'],
-                    compact: false,
-                    sourceMap: true
+                    presets: ['es2015', 'react']
                 }
             },
             {
@@ -50,6 +47,9 @@ module.exports = {
             },
 
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.json', '.jsx'],
     },
     devServer: {
         contentBase: path.join(__dirname, "public"),
