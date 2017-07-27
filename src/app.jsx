@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 /**
  * @class App
  * @extends {Component}
- * Sample React component
+ * @description Sample React component
  */
 class App extends Component {
     /**
