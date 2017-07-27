@@ -50,10 +50,21 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'eslint-loader',
             },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: 'style-loader',
+                }, {
+                    loader: 'css-loader',
+                }, {
+                    loader: 'sass-loader',
+                }],
+            },
+
         ],
     },
     resolve: {
-        extensions: ['.js', '.json', '.jsx'],
+        extensions: ['.js', '.json', '.jsx', '.scss'],
     },
     devServer: {
         contentBase: path.join(__dirname, 'public'),
